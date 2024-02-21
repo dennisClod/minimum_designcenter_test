@@ -1,26 +1,44 @@
 /* Returns an integer in the range [0, n).
- *
+ * sjfkjdsfhhdsfj
+ fkdjfkdsjfds
+ djskfjkjdshfjfg
+ dsfhkjdshfjdhgjd
+ if (min_num < max_num)
+        {
+            low_num = min_num;
+            hi_num = max_num + 1; // include max_num in output
+        } else {
+            low_num = max_num + 1; // include max_num in output
+            hi_num = min_num;
+        }
+
  * Uses rand(), and so is affected-by/affects the same seed.
  */
-int randint(int n) {
-  if ((n - 1) == RAND_MAX) {
-    return rand();
-  } else {
-    // Supporting larger values for n would requires an even more
-    // elaborate implementation that combines multiple calls to rand()
-    assert (n <= RAND_MAX)
 
-    // Chop off all of the values that would cause skew...
-    int end = RAND_MAX / n; // truncate skew
-    assert (end > 0);
-    end *= n;
+#include <stdio.h>
 
-    // ... and ignore results from rand() that fall above that limit.
-    // (Worst case the loop condition should succeed 50% of the time,
-    // so we can expect to bail out of this loop pretty quickly.)
-    int r;
-    while ((r = rand()) >= end);
+    int random_number(int min_num, int max_num);
 
-    return r % n;
-  }
-}
+    int main(void)
+    {
+        printf("Min : 1 Max : 40 %d\n", random_number(1,40));
+        printf("Min : 100 Max : 1000 %d\n",random_number(100,1000));
+        return 0;
+    }
+
+    int random_number(int min_num, int max_num)
+    {
+        int result = 0, low_num = 0, hi_num = 0;
+
+        if (min_num < max_num)
+        {
+            low_num = min_num;
+            hi_num = max_num + 1; // include max_num in output
+        } else {
+            low_num = max_num + 1; // include max_num in output
+            hi_num = min_num;
+        }
+
+        srand(time(NULL));
+        result = (rand() % (hi_num - low_num)) + low_num;
+        r

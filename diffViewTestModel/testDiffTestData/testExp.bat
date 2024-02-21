@@ -1,12 +1,18 @@
-function y = exp(a, x)
+function n = exp(a, x)
     % Copyright 2019 The MathWorks, Inc.
-    y = exp_iter(1, a, x);
+    n = exp_iter(1, a, x);
 end
 
-function y = exp_iter(a, n, product)
+function bool = even(n)
+    bool = mod(n, 2) == 0;
+end
+
+function y = exp_iter(a, b, n)
     if n == 0
-        y = product;
+        y = a;
+    elseif even(n)
+        y = exp_iter(a, b.^2, n / 2);
     else
-        y = exp_iter(a, n - 1, a * product);
+        y = exp_iter(a * b, b, n - 1);
     end
 end
