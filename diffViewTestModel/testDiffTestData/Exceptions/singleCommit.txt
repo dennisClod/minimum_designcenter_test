@@ -1,0 +1,19 @@
+scm
+connection scm:git:git@github.mathworks.com:development/simulink-model-extension.git
+developerConnection scm:git:git@github.mathworks.com:development/simulink-model-extension.git
+build
+plugins
+plugin
+groupId com.mathworks.iat.maven
+artifactId session_generator
+version 2.12.0
+configuration
+skipSiteGeneration true
+skipModuleFarming true
+platformExclusions
+platformExclusion
+platforms
+platform
+all_mac
+win64
+pluginManagement
