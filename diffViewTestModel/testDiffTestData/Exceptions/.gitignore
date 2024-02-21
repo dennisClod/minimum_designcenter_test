@@ -1,3 +1,19 @@
+# /node_modules/
+# /test-results/
+/dhskhfkjshf/
+
+/some/
+/random/
+/stuff/
+/git/
+/test/
+/playwright-report/
+
 /node_modules/
 /test-results/
 /playwright-report/
+/some/
+/random/
+/stuff/
+/git/
+/test/
