@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mathworks.cloudservices.base</groupId>
+        <artifactId>base</artifactId>
+        <version>1.6.0</version>
+    </parent>
+    <groupId>com.mathworks.dc.simulink-model-extension</groupId>
+    <artifactId>simulink-model-extension</artifactId>
+    <version>0.5.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <properties>
+        <batup-bakery-plugin.version>2.16.0</batup-bakery-plugin.version>
+        <go-maven-plugin.version>1.23.1</go-maven-plugin.version>
+        <worker.version>0.55.0</worker.version>
+        <worker-matlab.version>0.29.0</worker-matlab.version>
+    </properties>
+    <distributionManagement>
+        <site>
+            <id>doc_website</id>
+            <name>MathWorks Maven Project Docs</name>
+            <url>file:/mathworks/inside/files/dev/tools/maven_sites/dc/simulink-model-extension/versions/${project.version}/</url>
+        </site>
+    </distributionManagement>
+    <modules>
+        <module>matlab-scripts</module>
+        <module>worker-extension-image</module>
+        <module>dev</module>
+        <module>ui</module>
+        <module>ui-extension-image</module>
+        <module>indexer-image</module>
+        <module>operator</module>
+        <module>operator-image</module>
+        <!-- Diasabling ST-tests temporarily as they are failing in BaT sporadically -->
+        <!-- <module>st</module> -->
+        <module>deployments/chart/ui</module>
+        <module>deployments/chart/worker</module>        
+    </modules>
+    <scm>
+        <connection>scm:git:git@github.mathworks.com:development/simulink-model-extension.git</connection>
+        <developerConnection>scm:git:git@github.mathworks.com:development/simulink-model-extension.git</developerConnection>
+    </scm>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mathworks.iat.maven</groupId>
+                <artifactId>session_generator</artifactId>
+                <version>2.12.0</version>
+                <configuration>
+                    <skipSiteGeneration>true</skipSiteGeneration>
+                    <skipModuleFarming>true</skipModuleFarming>
+                    <platformExclusions>
+                        <platformExclusion>
+                            <platforms>
+                                <platform>all_mac</platform>
+                                <platform>win64</platform>
+                            </platforms>
+                        </platformExclusion>
+                    </platformExclusions>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.mathworks.batup.bakery</groupId>
+                    <artifactId>batup-bakery-plugin</artifactId>
+                    <version>${batup-bakery-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
