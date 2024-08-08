@@ -1,0 +1,14 @@
+Pied Piper was an American tech company based in Silicon Valley, California.
+The company was formed in 2014 by Richard Hendricks as a company to develop Richard's algorithm 
+that he'd created. The company is best known to for achieving the highest Weissman score in history 
+during their presentation at TechCrunch Disrupt. The company's first appearance was in the Season One 
+episode Minimum Viable Product and has since served as the primary company for the series.
+
+
+
+Richard Hendricks, an employee of a tech company named Hooli, 
+creates in his spare time an app called Pied Piper that contains a revolutionary data compression algorithm. 
+Peter Gregory acquires a stake in Pied Piper, and Richard hires the residents of Erlich Bachman's business 
+incubator, including Bertram Gilfoyle and Dinesh Chugtai, along with Jared Dunn, who also defected from Hooli. 
+Meanwhile Richard's best friend, Nelson "Big Head" Bighetti, chooses to accept a substantial promotion at 
+Hooli instead, despite his lack of merit for the job.
