@@ -1,2 +1,4 @@
 # design-cloud-test-repo
-Design cloud test repo  123456
+Design cloud test repo
+
+Do not edit without permission.
